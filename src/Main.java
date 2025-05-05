@@ -69,6 +69,9 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             int temp = arr[i];
             int count = 0;
+            if (temp < 0){
+                temp = -temp;
+            }
             while (temp > 0){
                 temp = temp/10;
                 count++;
@@ -81,6 +84,9 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             int temp = arr[i];
             int count = 0;
+            if (temp < 0){
+                temp = -temp;
+            }
             while (temp > 0){
                 temp = temp/10;
                 count++;
