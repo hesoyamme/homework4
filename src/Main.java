@@ -49,51 +49,64 @@ public class Main {
 
 ////       TASK 3
 
-        int max = 0;
-        int min = 100;
+//        int max = 0;
+//        int min = 100;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            int count = 0;
+//            int temp = arr[i];
+//            while (temp % 10 != 0){
+//                count++;
+//                temp = temp/10;
+//            }
+//            if(count > max){
+//                max = count;
+//            } else if(count < min){
+//                min = count;
+//            }
+//        }
+//        System.out.println("Самое длинное число: ");
+//        for (int i = 0; i < arr.length; i++) {
+//            int temp = arr[i];
+//            int count = 0;
+//            if (temp < 0){
+//                temp = -temp;
+//            }
+//            while (temp > 0){
+//                temp = temp/10;
+//                count++;
+//            }
+//            if (count == max){
+//                System.out.println(arr[i]);
+//            }
+//        }
+//        System.out.println("Самое короткое число: ");
+//        for (int i = 0; i < arr.length; i++) {
+//            int temp = arr[i];
+//            int count = 0;
+//            if (temp < 0){
+//                temp = -temp;
+//            }
+//            while (temp > 0){
+//                temp = temp/10;
+//                count++;
+//            }
+//            if (count == min){
+//                System.out.println(arr[i]);
+//            }
+//        }
+
+        /// TASK 4
+
+        int temp = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            int count = 0;
-            int temp = arr[i];
-            while (temp % 10 != 0){
-                count++;
-                temp = temp/10;
-            }
-            if(count > max){
-                max = count;
-            } else if(count < min){
-                min = count;
-            }
-        }
-        System.out.println("Самое длинное число: ");
-        for (int i = 0; i < arr.length; i++) {
-            int temp = arr[i];
-            int count = 0;
-            if (temp < 0){
-                temp = -temp;
-            }
-            while (temp > 0){
-                temp = temp/10;
-                count++;
-            }
-            if (count == max){
+
+            if(temp<arr[i]){
                 System.out.println(arr[i]);
+                temp = arr[i];
             }
-        }
-        System.out.println("Самое короткое число: ");
-        for (int i = 0; i < arr.length; i++) {
-            int temp = arr[i];
-            int count = 0;
-            if (temp < 0){
-                temp = -temp;
-            }
-            while (temp > 0){
-                temp = temp/10;
-                count++;
-            }
-            if (count == min){
-                System.out.println(arr[i]);
-            }
+
         }
 
 //
