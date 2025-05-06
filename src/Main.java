@@ -3,7 +3,7 @@ public class Main {
 //        int number = 10;
 ////         TASK 1
 
-        int[] arr = {45, 78, -15, 12, 34, 6, 91, 7, -2, -45};
+        int[] arr = {1, 1221, -15, 12, -6886, 6, 91, 7, -2, -45};
 //        int max = 0;
 //        int min = -1;
 //        for (int i = 0; i < arr.length; i++) {
@@ -98,16 +98,42 @@ public class Main {
 
         /// TASK 4
 
-        int temp = 0;
+//        int temp = 0;
+//
+//        for (int i = 0; i < arr.length; i++) {
+//
+//            if(temp<arr[i]){
+//                System.out.println(arr[i]);
+//                temp = arr[i];
+//            }
+//
+//        }
 
+        /// TASK 5
+        System.out.println("Числа палиндромы: ");
         for (int i = 0; i < arr.length; i++) {
-
-            if(temp<arr[i]){
-                System.out.println(arr[i]);
-                temp = arr[i];
+            int reverse = 0;
+            int num = arr[i];
+            int count = 0;
+            if (num < 0){
+                num = -num;
             }
+           int temp = num;
+           while ( temp > 0){
+               reverse = reverse * 10 + temp % 10;
+               temp = temp / 10;
+               count++;
+           }
+           if (count <= 1){
+               continue;
+           }
+           if (num == reverse){
+               System.out.println(arr[i]);
+           }
 
         }
+
+
 
 //
 //        int[] array = new int[10];
